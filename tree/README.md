@@ -1,1 +1,1 @@
-# Implementation of different tree data structures in python
+# Implementation of tree data structure in Python
