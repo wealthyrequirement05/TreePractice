@@ -46,3 +46,15 @@ class BST:
                 self.val = min_larger_node.val
                 self.right = self.right.delete(min_larger_node.val)
             return self
+
+    def get_max(self):
+        if self.right is None:
+            return self.val
+        else:
+            self.right.get_max()
+
+    def get_min(self):
+        if self.left is None:
+            return self.val
+        else:
+            self.left.get_min()
