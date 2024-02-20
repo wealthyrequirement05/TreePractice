@@ -22,3 +22,27 @@ class BST:
                 return
             self.right = BST(val)
             return
+
+    def delete(self, val):
+        if self.val is None:
+            return None
+        if val < self.val:
+            if self.left is not None:
+                self.left = self.left.delete(val)
+            return self
+        if val > self.val:
+            if self.right is not None:
+                self.right = self.right.delete(val)
+            return self
+        if val == self.val:
+            if self.right is None:
+                return self.left
+            elif self.left is None:
+                return self.right
+            else:
+                min_larger_node = self.right
+                while min_larger_node.left:
+                    min_larger_node = min_larger_node.left
+                self.val = min_larger_node.val
+                self.right = self.right.delete(min_larger_node.val)
+            return self

@@ -8,3 +8,5 @@ test_BST.insert(4)
 test_BST.insert(8)
 assert test_BST.right.val == 8
 assert test_BST.left.val == 4
+
+print(test_BST.delete(8).val)

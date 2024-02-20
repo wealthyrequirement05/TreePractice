@@ -22,3 +22,9 @@ def display_bst(node, level=0):
 connections = [10, 5, 15, 2, 7, 12, 18]
 bst = generate_bst(connections)
 display_bst(bst)
+to_delete = 15
+bst = bst.delete(to_delete)
+s = "-" * 20
+print(s)
+print(f"{to_delete} should be deleted below")
+display_bst(bst)
